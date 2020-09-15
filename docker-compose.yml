@@ -1,0 +1,14 @@
+version: '3.6'
+services:
+  node:
+    container_name: impot-node
+    image: 'node:12.18.3'
+    working_dir: /home/node/app
+    command:
+      - /bin/sh
+      - '-c'
+      - 'npm install && npm test'
+    ports:
+      - '3000:3000'
+    volumes:
+      - './:/home/node/app'
