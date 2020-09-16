@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: docker build
-        run: docker-compose up --build
-
+      - name: buildImage
+        run:  docker build -t testimpot .
+      - name: testUnit
+        run:  docker run testimport
